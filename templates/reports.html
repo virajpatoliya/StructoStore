@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Reports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="Logo.jpg" alt="Logo">
+      Paragon Broking Private Limited
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="expense.html">Daily Expense Entry</a></li>
+        <li><a href="scanning.html">Document Scanning</a></li>
+        <li><a href="backup.html">Call Log Backup</a></li>
+        <li><a href="reports.html" class="active">Generate Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Generate Reports</h2>
+    <button onclick="generateReport('daily')">Daily Report</button>
+    <button onclick="generateReport('weekly')">Weekly Report</button>
+    <button onclick="generateReport('monthly')">Monthly Report</button>
+    <button onclick="generateReport('yearly')">Yearly Report</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffffff, #f9f9f9); /* Gradient background */
+    color: #fff;
+    text-align: center;
+  }
+  
+  header {
+    background: linear-gradient(to right, #FF4B2B, #FF416C); /* Header gradient */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+  }
+  
+  header h1 img {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  
+  /* Navigation Bar Styles */
+  nav {
+    background: #fff; /* White background for navigation */
+    padding: 0; /* Remove padding if not needed */
+    margin-top: 20px; /* Space between title and navigation */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly */
+  }
+  
+  nav ul li {
+    flex: 1; /* Make each item take up equal space */
+  }
+  
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000; /* Black text color by default */
+    font-size: 1em;
+    padding: 10px 0; /* Increase padding for better click area */
+    text-align: center; /* Center-align text within each li */
+    background-color: #fff; /* White background for each item */
+    border-bottom: 2px solid transparent; /* Bottom border for highlight effect */
+  }
+  
+  /* Hover and Active States */
+  nav ul li a:hover {
+    color: #fff; /* White text color on hover */
+    background-color: #00f; /* Blue background on hover */
+    border-bottom: 2px solid #00f; /* Blue underline on hover */
+  }
+  
+  nav ul li a.active {
+    color: #fff; /* White text color when active */
+    background-color: #00f; /* Blue background when active */
+    border-bottom: 2px solid #00f; /* Blue underline when active */
+  }
+  
+  /* Main Content */
+  main {
+    margin: 80px auto 20px;
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  h2 {
+    color: #ffffff;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-top: 60px;
+    margin: 180px 40px;
+  }
+  
+  form input, form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form input:focus, form button:focus {
+    outline: none;
+    border-color: #FF416C;
+  }
+  
+  form button {
+    background-color: #FF416C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  form button:hover {
+    background-color: #FF4B2B;
+  }
+  
+  /* Links */
+  a {
+    color: #FF416C;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

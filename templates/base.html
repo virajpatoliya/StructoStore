@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Paragon Broking Private Limited{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="{{ url_for('static', filename='Logo.jpg') }}" alt="Logo">
+      Paragon Broking Private Limited
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('daily_expense') }}">Daily Expense Entry</a></li>
+        <li><a href="{{ url_for('document_scan') }}">Document Scanning</a></li>
+        <li><a href="{{ url_for('call_log') }}">Call Log Backup</a></li>
+        <li><a href="{{ url_for('reports') }}">Generate Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
