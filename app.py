@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('daily_expense.html')
+    return render_template('expense.html')
 
 @app.route('/daily-expense', methods=['GET', 'POST'])
 def daily_expense():
@@ -16,8 +16,8 @@ def daily_expense():
         description = request.form['description']
         date = request.form['date']
         response = submit_expense(amount, description, date)
-        return jsonify(response=response)
-    return render_template('daily_expense.html')
+        return render_template('expense.html')
+    return render_template('expense.html')
 
 @app.route('/document-scan', methods=['GET', 'POST'])
 def document_scan():
@@ -26,8 +26,8 @@ def document_scan():
         file = request.files['document_file']
         base64_file = file.read().decode('base64')
         response = upload_document(pan_number, base64_file)
-        return jsonify(response=response)
-    return render_template('document_scan.html')
+        return render_template('scanning.html')
+    return render_template('scanning.html')
 
 @app.route('/call-log', methods=['GET', 'POST'])
 def call_log():
@@ -36,15 +36,15 @@ def call_log():
         file_path = os.path.join('/tmp', file.filename)
         file.save(file_path)
         response = upload_call_log(file_path)
-        return jsonify(response=response)
-    return render_template('call_log.html')
+        return render_template('backup.html')
+    return render_template('backup.html')
 
 @app.route('/reports', methods=['GET', 'POST'])
 def reports():
     if request.method == 'POST':
         report_type = request.form['report_type']
         response = generate_report(report_type)
-        return jsonify(response=response)
+        return render_template('reports.html')
     return render_template('reports.html')
 
 def submit_expense(amount, description, date):
